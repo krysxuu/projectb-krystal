@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #f0f8ff;
+    color: #333;
+    text-align: center;
+    overflow: hidden;
+}
+
+.main-page .emoji-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.main-page .emoji {
+    position: absolute;
+    font-size: 2rem;
+    animation: fall 8s linear infinite;
+    opacity: 0.8;
+}
+
+.main-page .emoji:nth-child(1) { left: 10%; animation-delay: 0s; }
+.main-page .emoji:nth-child(2) { left: 20%; animation-delay: 1s; }
+.main-page .emoji:nth-child(3) { left: 40%; animation-delay: 2s; }
+.main-page .emoji:nth-child(4) { left: 50%; animation-delay: 3s; }
+.main-page .emoji:nth-child(5) { left: 70%; animation-delay: 1.5s; }
+.main-page .emoji:nth-child(6) { left: 85%; animation-delay: 2.5s; }
+.main-page .emoji:nth-child(7) { left: 5%; animation-delay: 0.5s; }
+.main-page .emoji:nth-child(8) { left: 90%; animation-delay: 3.5s; }
+
+@keyframes fall {
+    0% { transform: translateY(-10%); }
+    100% { transform: translateY(100vh); }
+}
+
+.center-box-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.center-box {
+    width: 80%;
+    max-width: 400px;
+    margin: 20% auto;
+    padding: 20px;
+    background-color: #fb7185;
+    color: #fff;
+    border: 3px solid #4ade80;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.center-box:hover {
+    background-color: #facc15;
+    color: #000;
+    transform: scale(1.05);
+}
