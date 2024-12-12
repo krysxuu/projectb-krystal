@@ -1,15 +1,15 @@
 let raindrop;
-let moveSound;
+let rainyMusic;
 
 function preload() {
-  soundFormats('mp3');
-  moveSound = loadSound('Rainy.mp3');
-}
-
+    rainyMusic = loadSound("../assets/Rainy.mp3");
+  }
+  
 function setup() {
-  createCanvas(600, 600);
-  raindrop = new Raindrop(300, 300);
-}
+    let canvas = createCanvas(600, 600);
+    canvas.parent('p5-canvas-container');
+    raindrop = new Raindrop(300, 300);
+  }  
 
 function draw() {
   background(200, 230, 255);
@@ -20,8 +20,8 @@ function draw() {
 function keyPressed() {
   if (keyCode === LEFT_ARROW || keyCode === RIGHT_ARROW || 
       keyCode === UP_ARROW || keyCode === DOWN_ARROW) {
-    if (!moveSound.isPlaying()) {
-      moveSound.play();
+    if (!rainyMusic.isPlaying()) {
+      rainyMusic.play();
     }
   }
 }
@@ -29,7 +29,7 @@ function keyPressed() {
 function keyReleased() {
   if (!keyIsDown(LEFT_ARROW) && !keyIsDown(RIGHT_ARROW) && 
       !keyIsDown(UP_ARROW) && !keyIsDown(DOWN_ARROW)) {
-    moveSound.stop();
+    rainyMusic.stop();
   }
 }
 
