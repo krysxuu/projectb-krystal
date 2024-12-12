@@ -2,7 +2,7 @@ let raindrop;
 let rainyMusic;
 
 function preload() {
-    rainyMusic = loadSound("../assets/Rainy.mp3");
+    rainyMusic = loadSound("assets/Rainy.mp3");
   }
   
 function setup() {
