@@ -71,6 +71,42 @@ header .nav-link:hover {
     margin-bottom: 1.5rem;
 }
 
+.interactive-animation {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 800px;
+    height: 400px;
+    background: radial-gradient(circle, #1e2a38, #0f1a24);
+    border: 2px solid #78e08f;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    position: relative;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 20px #4a69bd;
+    }
+    to {
+        box-shadow: 0 0 30px #78e08f;
+    }
+}
+
+.description {
+    margin: 40px auto;
+    max-width: 700px;
+    padding: 25px;
+    font-size: 1.3rem;
+    line-height: 1.8;
+    background: rgba(255, 255, 255, 0.1);
+    color: #f8f9fa;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
 footer {
     padding: 15px;
     background: rgba(0, 0, 0, 0.8);
