@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #1e2a38, #3b4d66, #6b7a8f);
+    color: #f8f9fa;
+    text-align: center;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+header .title h1 {
+    font-size: 2.8rem;
+    color: #f8c291;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+header .title h2 {
+    font-size: 1.5rem;
+    color: #dfe6e9;
+    font-weight: 400;
+}
+
+header .nav-link {
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 20px;
+    color: #f8f9fa;
+    background: #4a69bd;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+header .nav-link:hover {
+    background: #78e08f;
+    transform: scale(1.1);
+    color: #333;
+}
+
+.interactive {
+    padding: 5% 10%;
+    text-align: center;
+    background: linear-gradient(to bottom, #2e3a59, #3b4d66);
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.interactive h2 {
+    font-size: 2.5rem;
+    color: #f8c291;
+    margin-bottom: 1rem;
+}
+
+.interactive p {
+    font-size: 1.2rem;
+    color: #dfe6e9;
+    margin-bottom: 1.5rem;
+}
+
+.interactive-animation {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 800px;
+    height: 400px;
+    background: radial-gradient(circle, #1e2a38, #0f1a24);
+    border: 2px solid #78e08f;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    position: relative;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 20px #4a69bd;
+    }
+    to {
+        box-shadow: 0 0 30px #78e08f;
+    }
+}
+
+.description {
+    margin: 40px auto;
+    max-width: 700px;
+    padding: 25px;
+    font-size: 1.3rem;
+    line-height: 1.8;
+    background: rgba(255, 255, 255, 0.1);
+    color: #f8f9fa;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+footer {
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #dfe6e9;
+    font-size: 0.9rem;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+}
