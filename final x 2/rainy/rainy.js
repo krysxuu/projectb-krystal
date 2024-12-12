@@ -2,28 +2,25 @@ let raindrop;
 let rainyMusic;
 
 function preload() {
-    rainyMusic = loadSound("assets/Rainy.mp3", 
-        () => console.log("Sound loaded successfully!"),
-        (err) => console.error("Error loading sound:", err)
-    );
+    rainyMusic = loadSound("assets/Rainy.mp3");
 }
 
 function setup() {
-    let canvas = createCanvas(600, 600);
+    let canvas = createCanvas(600, 400);
     canvas.parent('p5-canvas-container');
-    raindrop = new Raindrop(300, 300);
+    raindrop = new Raindrop(width / 2, height / 2);
 
     let startButton = createButton("Start Rain Sound");
-    startButton.position(10, height + 20);
+    startButton.position(20, height + 20);
     startButton.mousePressed(() => {
         if (!rainyMusic.isPlaying()) {
-            rainyMusic.play();
+            rainyMusic.loop();
         }
     });
 }
 
 function draw() {
-    background(200, 230, 255);
+    background(180, 220, 255);
     raindrop.display();
     raindrop.move();
 }
@@ -67,7 +64,6 @@ class Raindrop {
         if (keyIsDown(RIGHT_ARROW)) this.x += 5;
         if (keyIsDown(UP_ARROW)) this.y -= 5;
         if (keyIsDown(DOWN_ARROW)) this.y += 5;
-
         this.x = constrain(this.x, 0, width);
         this.y = constrain(this.y, 0, height);
     }
